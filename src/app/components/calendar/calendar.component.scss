@@ -1,0 +1,29 @@
+table{
+  border: 1px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+  td{
+    padding: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    background: #aaa;
+    transition: all 0.2s;
+    &:hover:not(.disabled){
+      background: #333;
+      cursor: pointer;
+      color: #fff;
+    }
+    &.disabled{
+      opacity: 0.5;
+
+    }
+    &.active{
+      background: #999;
+      color: var(--primary-color);
+    }
+    &.selected{
+      font-weight: bold;
+    }
+  }
+}

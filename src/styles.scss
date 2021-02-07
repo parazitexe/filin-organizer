@@ -1,18 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-:root{
-  --primary-color:#dc3545;
-  --darsk-color:#333;
-  --light-color:#f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #dc3545;
+  --darsk-color: #333;
+  --light-color: #f4f4f4;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -21,11 +23,62 @@ body{
 }
 
 
-a{
+a {
   color: var(--primary-color);
   text-decoration: none;
-  &:hover{
 
+  &:hover {
+    color: #666;
   }
 }
 
+ul {
+  list-style: none;
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+
+
+table th{
+  background: var(--light-color);
+}
+
+.btn{
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  outline: none;
+
+  &:disabled{
+    background: var(--darsk-color);
+    color: #fff;
+    cursor: not-allowed;
+  }
+  &:hover:not(:disabled){
+      opacity: 80%;
+  }
+}
+
+.btn-block{
+  width: 100%;
+}
+.btn-primary{
+  background: var(--primary-color);
+  color: #fff;
+}
+.text-center{
+  text-align: center;
+}
