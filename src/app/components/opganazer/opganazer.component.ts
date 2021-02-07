@@ -38,7 +38,7 @@ export class OpganazerComponent implements OnInit {
     this.tasksService.create(task).subscribe(createdTask => {
       this.form.reset();
       this.tasks.push(createdTask);
-    }, error => console.log(error));
+    }, error => console.log('error - ', error));
   }
 
 
