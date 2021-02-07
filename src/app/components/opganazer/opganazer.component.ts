@@ -38,8 +38,10 @@ export class OpganazerComponent implements OnInit {
     this.tasksService.create(task).subscribe(createdTask => {
       this.form.reset();
       this.tasks.push(createdTask);
-    }, error => console.log);
+    }, error => console.log(error));
   }
+
+
 
   remove(task: Task): void {
     this.tasksService.remove(task).subscribe(() => {
